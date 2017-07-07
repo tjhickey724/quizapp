@@ -1,9 +1,10 @@
-Template.quiz2m.helpers({
+Template.quiz3.helpers({
   groups(){return Groups.find()}
 })
 
-Template.quiz2m.events({
+Template.quiz3.events({
   'click button#createGroup'(event,instance){
+    event.preventDefault(); // this keeps the browser from reloading the page!
     var name = instance.$("#js-groupname").val();
     var description = instance.$("#js-description").val();
 
